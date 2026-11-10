@@ -57,6 +57,7 @@
   --ui-layout-tabbar-height: 3.5rem;
   --ui-layout-sidebar-width: 15rem;
   --ui-layout-content-max: 56rem;
+  --ui-layout-narrow-max: 26rem;
 
   /* Superposition */
   --ui-z-nav: 10;
@@ -65,6 +66,7 @@
 
   /* Mouvement */
   --ui-duration-fast: 120ms;
+  --ui-duration-spin: 800ms;
   --ui-easing: cubic-bezier(0.2, 0, 0, 1);
 
   color-scheme: light;

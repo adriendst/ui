@@ -1,0 +1,18 @@
+/* Une seule colonne, jamais plus large que l'écran ni que --ui-layout-narrow-max. */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, var(--ui-layout-narrow-max));
+  justify-content: center;
+  align-content: center;
+  min-height: 100dvh;
+  padding-top: max(var(--ui-space-6), env(safe-area-inset-top, 0px));
+  padding-bottom: max(var(--ui-space-6), env(safe-area-inset-bottom, 0px));
+  padding-left: max(var(--ui-space-4), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--ui-space-4), env(safe-area-inset-right, 0px));
+}
+
+.column {
+  display: grid;
+  gap: var(--ui-space-6);
+  min-width: 0;
+}

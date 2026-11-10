@@ -8,3 +8,7 @@
 - Composant `AppShell` : navigation en bas sur mobile, colonne latérale à partir de 48rem, lien d'évitement, zones sûres.
 - Composant `PageHeader` : titre `h1`, description et actions.
 - Composant `EmptyState` : état vide avec titre, description, icône et appel à l'action.
+- Composant `TextField` : champ texte avec libellé, aide et erreur reliés (`aria-describedby`, `aria-invalid`).
+- Composant `Spinner` : indicateur de chargement annoncé (`role="status"`), immobile si mouvement réduit.
+- Composant `CenteredLayout` : page sans navigation, colonne étroite centrée.
+- Tokens `--ui-layout-narrow-max` et `--ui-duration-spin`.

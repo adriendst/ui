@@ -1,0 +1,54 @@
+.field {
+  display: grid;
+  gap: var(--ui-space-1);
+}
+
+.label {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.input {
+  min-height: var(--ui-touch-target);
+  padding-inline: var(--ui-space-3);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-surface);
+  color: var(--ui-color-text);
+  /* 16 px minimum : en dessous, Safari sur iPhone zoome sur le champ. */
+  font: inherit;
+  font-size: max(var(--ui-font-size-md), 16px);
+  transition: border-color var(--ui-duration-fast) var(--ui-easing);
+}
+
+.input:hover {
+  border-color: var(--ui-color-text-muted);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 1px;
+  border-color: var(--ui-color-focus);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--ui-color-danger);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.description,
+.error {
+  margin: 0;
+  font-size: var(--ui-font-size-sm);
+}
+
+.description {
+  color: var(--ui-color-text-muted);
+}
+
+.error {
+  color: var(--ui-color-danger);
+}
