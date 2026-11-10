@@ -16,6 +16,8 @@
   --ui-color-success: #1f7a4d;
   --ui-color-warning: #9a5a00;
   --ui-color-danger: #b42318;
+  --ui-color-danger-hover: #912018;
+  --ui-color-on-danger: #ffffff;
   --ui-color-focus: #2d4f8b;
 
   /* Typographie */
@@ -86,6 +88,8 @@
     --ui-color-success: #6fd3a0;
     --ui-color-warning: #f0b660;
     --ui-color-danger: #f97066;
+    --ui-color-danger-hover: #fb8a82;
+    --ui-color-on-danger: #10141c;
     --ui-color-focus: #8fb0ea;
     --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
     color-scheme: dark;
@@ -105,6 +109,8 @@
   --ui-color-success: #6fd3a0;
   --ui-color-warning: #f0b660;
   --ui-color-danger: #f97066;
+  --ui-color-danger-hover: #fb8a82;
+  --ui-color-on-danger: #10141c;
   --ui-color-focus: #8fb0ea;
   --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
   color-scheme: dark;
