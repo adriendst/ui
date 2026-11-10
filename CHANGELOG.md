@@ -12,3 +12,5 @@
 - Composant `Spinner` : indicateur de chargement annoncé (`role="status"`), immobile si mouvement réduit.
 - Composant `CenteredLayout` : page sans navigation, colonne étroite centrée.
 - Tokens `--ui-layout-narrow-max` et `--ui-duration-spin`.
+- Composant `SelectField` : liste de choix native avec libellé, aide et erreur reliés, comme `TextField`.
+- `buttonClassName({ variant, size, className })` : apparence de `Button` pour un autre élément (lien du routeur).

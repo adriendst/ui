@@ -1,8 +1,7 @@
 import type { ComponentPropsWithRef } from 'react'
-import styles from './Button.module.css'
+import { type ButtonSize, type ButtonVariant, buttonClassName } from './button-class-name'
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost'
-export type ButtonSize = 'md' | 'sm'
+export type { ButtonSize, ButtonVariant } from './button-class-name'
 
 export type ButtonProps = ComponentPropsWithRef<'button'> & {
   variant?: ButtonVariant
@@ -16,9 +15,5 @@ export function Button({
   className,
   ...props
 }: ButtonProps) {
-  const classes = [styles.button, styles[variant], styles[size], className]
-    .filter(Boolean)
-    .join(' ')
-
-  return <button type={type} className={classes} {...props} />
+  return <button type={type} className={buttonClassName({ variant, size, className })} {...props} />
 }

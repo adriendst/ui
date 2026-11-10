@@ -11,6 +11,8 @@
   font-size: var(--ui-font-size-md);
   font-weight: var(--ui-font-weight-medium);
   line-height: 1;
+  /* Même rendu sur un lien stylé avec buttonClassName. */
+  text-decoration: none;
   cursor: pointer;
   transition:
     background-color var(--ui-duration-fast) var(--ui-easing),
