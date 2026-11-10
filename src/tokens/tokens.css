@@ -22,6 +22,7 @@
   --ui-font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
   --ui-font-display: 'Zen Kaku Gothic New', 'Segoe UI', system-ui, sans-serif;
   --ui-font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  --ui-font-size-xs: 0.75rem;
   --ui-font-size-sm: 0.875rem;
   --ui-font-size-md: 1rem;
   --ui-font-size-lg: 1.25rem;
@@ -30,6 +31,7 @@
   --ui-font-weight-medium: 500;
   --ui-font-weight-bold: 700;
   --ui-line-height: 1.5;
+  --ui-line-height-tight: 1.15;
 
   /* Espacements (base 4 px) */
   --ui-space-1: 0.25rem;
@@ -45,8 +47,21 @@
   --ui-radius-full: 999px;
   --ui-border-width: 1px;
 
+  /* Ombres */
+  --ui-shadow-md: 0 4px 16px rgb(23 24 28 / 0.12);
+
   /* Tailles */
   --ui-touch-target: 44px;
+
+  /* Mise en page */
+  --ui-layout-tabbar-height: 3.5rem;
+  --ui-layout-sidebar-width: 15rem;
+  --ui-layout-content-max: 56rem;
+
+  /* Superposition */
+  --ui-z-nav: 10;
+  --ui-z-toast: 20;
+  --ui-z-overlay: 30;
 
   /* Mouvement */
   --ui-duration-fast: 120ms;
@@ -70,6 +85,7 @@
     --ui-color-warning: #f0b660;
     --ui-color-danger: #f97066;
     --ui-color-focus: #8fb0ea;
+    --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
     color-scheme: dark;
   }
 }
@@ -88,6 +104,7 @@
   --ui-color-warning: #f0b660;
   --ui-color-danger: #f97066;
   --ui-color-focus: #8fb0ea;
+  --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
   color-scheme: dark;
 }
 
