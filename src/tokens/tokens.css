@@ -1,0 +1,98 @@
+/*
+ * Tokens de @mangad/ui : toutes les valeurs visuelles passent par ces variables.
+ * Thème clair par défaut, thème sombre via prefers-color-scheme ou data-theme="dark".
+ */
+:root {
+  /* Couleurs */
+  --ui-color-bg: #f7f7f5;
+  --ui-color-surface: #ffffff;
+  --ui-color-text: #17181c;
+  --ui-color-text-muted: #5b5f6b;
+  --ui-color-border: #dcdde2;
+  --ui-color-accent: #2d4f8b;
+  --ui-color-accent-hover: #24406f;
+  --ui-color-on-accent: #ffffff;
+  --ui-color-accent-soft: #e6ecf6;
+  --ui-color-success: #1f7a4d;
+  --ui-color-warning: #9a5a00;
+  --ui-color-danger: #b42318;
+  --ui-color-focus: #2d4f8b;
+
+  /* Typographie */
+  --ui-font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --ui-font-display: 'Zen Kaku Gothic New', 'Segoe UI', system-ui, sans-serif;
+  --ui-font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+  --ui-font-size-sm: 0.875rem;
+  --ui-font-size-md: 1rem;
+  --ui-font-size-lg: 1.25rem;
+  --ui-font-size-xl: 1.75rem;
+  --ui-font-weight-regular: 400;
+  --ui-font-weight-medium: 500;
+  --ui-font-weight-bold: 700;
+  --ui-line-height: 1.5;
+
+  /* Espacements (base 4 px) */
+  --ui-space-1: 0.25rem;
+  --ui-space-2: 0.5rem;
+  --ui-space-3: 0.75rem;
+  --ui-space-4: 1rem;
+  --ui-space-6: 1.5rem;
+  --ui-space-8: 2rem;
+
+  /* Formes */
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 8px;
+  --ui-radius-full: 999px;
+  --ui-border-width: 1px;
+
+  /* Tailles */
+  --ui-touch-target: 44px;
+
+  /* Mouvement */
+  --ui-duration-fast: 120ms;
+  --ui-easing: cubic-bezier(0.2, 0, 0, 1);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ui-color-bg: #121318;
+    --ui-color-surface: #1a1c22;
+    --ui-color-text: #ecedf1;
+    --ui-color-text-muted: #a2a6b3;
+    --ui-color-border: #2c2f38;
+    --ui-color-accent: #8fb0ea;
+    --ui-color-accent-hover: #a9c3f0;
+    --ui-color-on-accent: #10141c;
+    --ui-color-accent-soft: #1d2a42;
+    --ui-color-success: #6fd3a0;
+    --ui-color-warning: #f0b660;
+    --ui-color-danger: #f97066;
+    --ui-color-focus: #8fb0ea;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --ui-color-bg: #121318;
+  --ui-color-surface: #1a1c22;
+  --ui-color-text: #ecedf1;
+  --ui-color-text-muted: #a2a6b3;
+  --ui-color-border: #2c2f38;
+  --ui-color-accent: #8fb0ea;
+  --ui-color-accent-hover: #a9c3f0;
+  --ui-color-on-accent: #10141c;
+  --ui-color-accent-soft: #1d2a42;
+  --ui-color-success: #6fd3a0;
+  --ui-color-warning: #f0b660;
+  --ui-color-danger: #f97066;
+  --ui-color-focus: #8fb0ea;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ui-duration-fast: 0ms;
+  }
+}
