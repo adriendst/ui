@@ -14,3 +14,4 @@
 - Tokens `--ui-layout-narrow-max` et `--ui-duration-spin`.
 - Composant `SelectField` : liste de choix native avec libellé, aide et erreur reliés, comme `TextField`.
 - `buttonClassName({ variant, size, className })` : apparence de `Button` pour un autre élément (lien du routeur).
+- Composant `SegmentedControl` : choix exclusif en boutons collés, sur des boutons radio natifs (libellé masquable).

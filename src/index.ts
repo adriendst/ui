@@ -9,6 +9,11 @@ export { EmptyState } from './components/EmptyState/EmptyState'
 export type { EmptyStateProps } from './components/EmptyState/EmptyState'
 export { PageHeader } from './components/PageHeader/PageHeader'
 export type { PageHeaderProps } from './components/PageHeader/PageHeader'
+export { SegmentedControl } from './components/SegmentedControl/SegmentedControl'
+export type {
+  SegmentedControlOption,
+  SegmentedControlProps,
+} from './components/SegmentedControl/SegmentedControl'
 export { SelectField } from './components/SelectField/SelectField'
 export type { SelectFieldOption, SelectFieldProps } from './components/SelectField/SelectField'
 export { Spinner } from './components/Spinner/Spinner'

@@ -1,0 +1,73 @@
+.field {
+  display: grid;
+  gap: var(--ui-space-1);
+}
+
+.label {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.hiddenLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.group {
+  display: flex;
+  padding: var(--ui-space-1);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-surface);
+}
+
+.option {
+  position: relative;
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  /* Hauteur totale (avec le cadre du groupe) d'au moins une zone tactile. */
+  min-height: calc(var(--ui-touch-target) - var(--ui-space-2));
+  place-items: center;
+  padding-inline: var(--ui-space-3);
+  border-radius: var(--ui-radius-sm);
+  color: var(--ui-color-text-muted);
+  font-weight: var(--ui-font-weight-medium);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--ui-duration-fast) var(--ui-easing),
+    color var(--ui-duration-fast) var(--ui-easing);
+}
+
+.option:hover {
+  color: var(--ui-color-text);
+}
+
+.option:has(:checked) {
+  background: var(--ui-color-accent);
+  color: var(--ui-color-on-accent);
+}
+
+.option:has(:focus-visible) {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 2px;
+}
+
+/* Bouton radio masqué mais toujours focalisable et annoncé. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
