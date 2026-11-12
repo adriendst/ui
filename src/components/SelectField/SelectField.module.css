@@ -1,6 +1,8 @@
+/* `min-width: 0` : la liste rétrécit avec son conteneur au lieu de s'élargir à sa plus longue option. */
 .field {
   display: grid;
   gap: var(--ui-space-1);
+  min-width: 0;
 }
 
 .label {
@@ -14,7 +16,9 @@
 
 .select {
   appearance: none;
+  min-width: 0;
   min-height: var(--ui-touch-target);
+  text-overflow: ellipsis;
   padding-inline: var(--ui-space-3) calc(var(--ui-space-3) * 2 + 1rem);
   border: var(--ui-border-width) solid var(--ui-color-border);
   border-radius: var(--ui-radius-md);
