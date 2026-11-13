@@ -17,3 +17,4 @@
 - Composant `SegmentedControl` : choix exclusif en boutons collés, sur des boutons radio natifs (libellé masquable).
 - `Button` : variante `danger` pour les actions destructrices (tokens `--ui-color-danger-hover` et `--ui-color-on-danger`).
 - `SelectField` : la liste rétrécit avec son conteneur (`min-width: 0`) et tronque l'option choisie trop longue.
+- `SegmentedControl` : un libellé trop long pour son option se coupe (…) au lieu de déborder sur la voisine, et les marges intérieures des options passent à `--ui-space-1` (4 options courtes tiennent sur un téléphone).

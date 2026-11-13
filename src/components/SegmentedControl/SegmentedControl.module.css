@@ -31,8 +31,10 @@
   min-width: 0;
   /* Hauteur totale (avec le cadre du groupe) d'au moins une zone tactile. */
   min-height: calc(var(--ui-touch-target) - var(--ui-space-2));
+  /* Colonne bornée à l'option : un libellé trop long se coupe (…) au lieu de déborder sur la voisine. */
+  grid-template-columns: minmax(0, 1fr);
   place-items: center;
-  padding-inline: var(--ui-space-3);
+  padding-inline: var(--ui-space-1);
   border-radius: var(--ui-radius-sm);
   color: var(--ui-color-text-muted);
   font-weight: var(--ui-font-weight-medium);
@@ -67,6 +69,8 @@
 }
 
 .text {
+  /* Centré, le libellé prendrait sa largeur naturelle et déborderait : borné à sa colonne. */
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
