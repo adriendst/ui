@@ -1,0 +1,65 @@
+.chart {
+  display: grid;
+  gap: var(--ui-space-1);
+  min-width: 0;
+}
+
+/* Haut de l'échelle, aligné sur la ligne pointillée du haut des barres. */
+.scale {
+  min-block-size: calc(var(--ui-font-size-xs) * var(--ui-line-height));
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.bars {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  gap: var(--ui-space-1);
+  margin: 0;
+  padding: 0;
+  border-block-start: var(--ui-border-width) dashed var(--ui-color-border);
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  gap: var(--ui-space-1);
+  min-width: 0;
+}
+
+.track {
+  display: flex;
+  align-items: flex-end;
+  block-size: calc(var(--ui-space-8) * 4);
+  border-block-end: var(--ui-border-width) solid var(--ui-color-text-muted);
+}
+
+.bar {
+  display: block;
+  inline-size: 100%;
+  /* Une petite valeur reste visible. */
+  min-block-size: calc(var(--ui-border-width) * 3);
+  border-start-start-radius: var(--ui-radius-sm);
+  border-start-end-radius: var(--ui-radius-sm);
+  background: var(--ui-color-accent);
+}
+
+.axisLabel {
+  overflow: hidden;
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-xs);
+  text-align: center;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

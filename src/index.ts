@@ -1,5 +1,7 @@
 export { AppShell } from './components/AppShell/AppShell'
 export type { AppShellProps } from './components/AppShell/AppShell'
+export { BarChart } from './components/BarChart/BarChart'
+export type { BarChartDatum, BarChartProps } from './components/BarChart/BarChart'
 export { Button } from './components/Button/Button'
 export { buttonClassName } from './components/Button/button-class-name'
 export type { ButtonProps, ButtonSize, ButtonVariant } from './components/Button/Button'

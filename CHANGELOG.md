@@ -18,3 +18,4 @@
 - `Button` : variante `danger` pour les actions destructrices (tokens `--ui-color-danger-hover` et `--ui-color-on-danger`).
 - `SelectField` : la liste rétrécit avec son conteneur (`min-width: 0`) et tronque l'option choisie trop longue.
 - `SegmentedControl` : un libellé trop long pour son option se coupe (…) au lieu de déborder sur la voisine, et les marges intérieures des options passent à `--ui-space-1` (4 options courtes tiennent sur un téléphone).
+- Composant `BarChart` : graphique en barres verticales sans dépendance (liste ordonnée, valeurs lues par les lecteurs d'écran, échelle commune possible avec `max`).
