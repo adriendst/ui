@@ -1,0 +1,100 @@
+.field {
+  display: grid;
+  justify-items: start;
+  gap: var(--ui-space-1);
+}
+
+.label {
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.hiddenLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.group {
+  display: flex;
+  /* Les zones tactiles se touchent : glisser d'une étoile à l'autre ne tombe pas dans un trou. */
+  margin-inline-start: calc(var(--ui-space-2) * -1);
+}
+
+.group[aria-disabled='true'] {
+  opacity: 0.5;
+}
+
+.option {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--ui-touch-target);
+  height: var(--ui-touch-target);
+  border-radius: var(--ui-radius-sm);
+  cursor: pointer;
+  transition: color var(--ui-duration-fast) var(--ui-easing);
+}
+
+.group[aria-disabled='true'] .option {
+  cursor: not-allowed;
+}
+
+.filled {
+  color: var(--ui-color-accent);
+}
+
+.empty {
+  color: var(--ui-color-text-muted);
+}
+
+/*
+ * Aperçu au survol : les étoiles jusqu'à celle sous la souris se remplissent, les suivantes se vident.
+ * La propriété CSS `fill` passe devant l'attribut posé par l'icône.
+ */
+@media (hover: hover) {
+  .group:not([aria-disabled='true']):has(.option:hover) .option {
+    color: var(--ui-color-text-muted);
+  }
+
+  .group:not([aria-disabled='true']):has(.option:hover) .star {
+    fill: none;
+  }
+
+  .group:not([aria-disabled='true']) .option:hover,
+  .group:not([aria-disabled='true']) .option:has(~ .option:hover) {
+    color: var(--ui-color-accent);
+  }
+
+  .group:not([aria-disabled='true']) .option:hover .star,
+  .group:not([aria-disabled='true']) .option:has(~ .option:hover) .star {
+    fill: currentColor;
+  }
+}
+
+.option:has(:focus-visible) {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: -2px;
+}
+
+.star {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Bouton radio masqué mais toujours focalisable et annoncé. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.description {
+  margin: 0;
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-sm);
+}

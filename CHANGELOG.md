@@ -19,3 +19,6 @@
 - `SelectField` : la liste rétrécit avec son conteneur (`min-width: 0`) et tronque l'option choisie trop longue.
 - `SegmentedControl` : un libellé trop long pour son option se coupe (…) au lieu de déborder sur la voisine, et les marges intérieures des options passent à `--ui-space-1` (4 options courtes tiennent sur un téléphone).
 - Composant `BarChart` : graphique en barres verticales sans dépendance (liste ordonnée, valeurs lues par les lecteurs d'écran, échelle commune possible avec `max`).
+- Composant `StarRating` : note en étoiles en lecture seule, dessin caché aux lecteurs d’écran qui lisent son `label` (tailles `sm`, `md`).
+- Composant `StarRatingField` : choix d'une note en étoiles sur des boutons radio natifs, aperçu au survol, aide reliée.
+- Composant `TextAreaField` : zone de texte sur plusieurs lignes, libellé, aide et erreur reliés comme `TextField`.
