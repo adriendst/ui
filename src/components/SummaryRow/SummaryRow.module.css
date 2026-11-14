@@ -1,0 +1,39 @@
+.summary {
+  display: grid;
+  gap: var(--ui-space-2);
+}
+
+/* Intitulé et valeur à gauche, bouton à droite ; le bouton passe dessous si la place manque. */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-1) var(--ui-space-3);
+}
+
+.text {
+  display: grid;
+  gap: var(--ui-space-1);
+  min-width: 0;
+  margin: 0;
+}
+
+.label {
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-sm);
+}
+
+.value {
+  font-weight: var(--ui-font-weight-medium);
+  overflow-wrap: anywhere;
+}
+
+.status {
+  color: var(--ui-color-success);
+  font-size: var(--ui-font-size-sm);
+}
+
+.status:empty {
+  display: none;
+}

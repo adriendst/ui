@@ -54,6 +54,25 @@
   color: var(--ui-color-on-accent);
 }
 
+/*
+ * Séparateur vertical en pointillés entre deux options, masqué de part et d'autre de l'option
+ * choisie : son fond suffit à la détacher.
+ */
+.option + .option::before {
+  content: '';
+  position: absolute;
+  inset-block: var(--ui-space-2);
+  inset-inline-start: 0;
+  border-inline-start: calc(var(--ui-border-width) * 2) dotted var(--ui-color-separator);
+  pointer-events: none;
+  transition: opacity var(--ui-duration-fast) var(--ui-easing);
+}
+
+.option:has(:checked)::before,
+.option:has(:checked) + .option::before {
+  opacity: 0;
+}
+
 .option:has(:focus-visible) {
   outline: 2px solid var(--ui-color-focus);
   outline-offset: 2px;

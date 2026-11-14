@@ -1,0 +1,20 @@
+/* Piste neutre, commune aux deux tons. */
+.bar {
+  height: var(--ui-space-1);
+  overflow: hidden;
+  border-radius: var(--ui-radius-full);
+  background: var(--ui-color-border);
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.accent .fill {
+  background: var(--ui-color-accent);
+}
+
+.success .fill {
+  background: var(--ui-color-success);
+}

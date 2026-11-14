@@ -9,6 +9,8 @@
   --ui-color-text: #17181c;
   --ui-color-text-muted: #5b5f6b;
   --ui-color-border: #dcdde2;
+  /* Séparateurs en pointillés (onglets, choix collés), plus marqués qu'une bordure. */
+  --ui-color-separator: #a9acb6;
   --ui-color-accent: #2d4f8b;
   --ui-color-accent-hover: #24406f;
   --ui-color-on-accent: #ffffff;
@@ -81,6 +83,7 @@
     --ui-color-text: #ecedf1;
     --ui-color-text-muted: #a2a6b3;
     --ui-color-border: #2c2f38;
+    --ui-color-separator: #5a5e6b;
     --ui-color-accent: #8fb0ea;
     --ui-color-accent-hover: #a9c3f0;
     --ui-color-on-accent: #10141c;
@@ -102,6 +105,7 @@
   --ui-color-text: #ecedf1;
   --ui-color-text-muted: #a2a6b3;
   --ui-color-border: #2c2f38;
+  --ui-color-separator: #5a5e6b;
   --ui-color-accent: #8fb0ea;
   --ui-color-accent-hover: #a9c3f0;
   --ui-color-on-accent: #10141c;

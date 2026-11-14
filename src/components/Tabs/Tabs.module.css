@@ -1,0 +1,92 @@
+.tabs {
+  display: grid;
+  gap: var(--ui-space-4);
+}
+
+.list {
+  display: flex;
+  border-bottom: var(--ui-border-width) solid var(--ui-color-border);
+}
+
+/* Liste collée en haut de l'écran (sous la barre d'état de l'iPhone), sur le fond de la page. */
+.sticky {
+  scroll-margin-top: env(safe-area-inset-top, 0px);
+}
+
+.sticky .list {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: var(--ui-z-nav);
+  background: var(--ui-color-bg);
+}
+
+.tab {
+  position: relative;
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: var(--ui-touch-target);
+  /* Colonne bornée à l'onglet : un libellé trop long se coupe (…) au lieu de déborder. */
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  padding-inline: var(--ui-space-2);
+  border: 0;
+  background: none;
+  color: var(--ui-color-text-muted);
+  font: inherit;
+  font-weight: var(--ui-font-weight-medium);
+  cursor: pointer;
+  transition: color var(--ui-duration-fast) var(--ui-easing);
+}
+
+.tab:hover {
+  color: var(--ui-color-text);
+}
+
+/* Trait sous l'onglet choisi, posé sur la bordure de la liste. */
+.tab::after {
+  content: '';
+  position: absolute;
+  inset-inline: var(--ui-space-2);
+  bottom: calc(var(--ui-border-width) * -1);
+  height: calc(var(--ui-border-width) * 2);
+  border-radius: var(--ui-radius-full);
+  background: transparent;
+  transition: background-color var(--ui-duration-fast) var(--ui-easing);
+}
+
+.tab[aria-selected='true'] {
+  color: var(--ui-color-accent);
+}
+
+.tab[aria-selected='true']::after {
+  background: var(--ui-color-accent);
+}
+
+/* Séparateur vertical en pointillés entre deux onglets. */
+.tab + .tab::before {
+  content: '';
+  position: absolute;
+  inset-block: var(--ui-space-3);
+  inset-inline-start: 0;
+  border-inline-start: calc(var(--ui-border-width) * 2) dotted var(--ui-color-separator);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: -2px;
+  border-radius: var(--ui-radius-sm);
+}
+
+.text {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.panel:focus-visible {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 4px;
+  border-radius: var(--ui-radius-sm);
+}

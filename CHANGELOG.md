@@ -22,3 +22,9 @@
 - Composant `StarRating` : note en étoiles en lecture seule, dessin caché aux lecteurs d’écran qui lisent son `label` (tailles `sm`, `md`).
 - Composant `StarRatingField` : choix d'une note en étoiles sur des boutons radio natifs, aperçu au survol, aide reliée.
 - Composant `TextAreaField` : zone de texte sur plusieurs lignes, libellé, aide et erreur reliés comme `TextField`.
+- Composant `Tabs` : onglets qui partagent une page en panneaux (motif ARIA « tabs », flèches, Début et Fin), panneaux masqués gardés montés, séparateurs verticaux en pointillés ; option `sticky` (liste collée en haut de l’écran, retour au début du panneau au changement d’onglet).
+- `SegmentedControl` : séparateur vertical en pointillés entre deux options (masqué à côté de l'option choisie).
+- Token `--ui-color-separator` (clair et sombre) pour ces séparateurs.
+- Composant `SummaryRow` : donnée rarement changée résumée en une ligne (intitulé, valeur, bouton « Modifier » nommé d'après l'intitulé), formulaire ouvert à sa place, focus rendu au bouton à la fermeture.
+- Composant `ProgressBar` : fine barre de progression (tons `accent`, `success`), annoncée si elle a un `label`, décorative sinon.
+- Composant `Snackbar` : bandeau en bas de l'écran, au-dessus de la navigation (message et boutons), zone d'annonce toujours présente, délai facultatif suspendu au survol et au focus, relancé par `messageKey`.

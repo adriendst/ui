@@ -1,0 +1,47 @@
+/* Zone live toujours présente pour que l’annonce soit lue par les lecteurs d’écran. */
+.region {
+  position: fixed;
+  inset-inline: 0;
+  bottom: calc(
+    var(--ui-layout-tabbar-height) + env(safe-area-inset-bottom, 0px) + var(--ui-space-3)
+  );
+  z-index: var(--ui-z-toast);
+  display: flex;
+  justify-content: center;
+  padding-left: max(var(--ui-space-4), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--ui-space-4), env(safe-area-inset-right, 0px));
+  pointer-events: none;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-2) var(--ui-space-4);
+  width: 100%;
+  max-width: 28rem;
+  padding: var(--ui-space-2) var(--ui-space-2) var(--ui-space-2) var(--ui-space-4);
+  border: var(--ui-border-width) solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-surface);
+  box-shadow: var(--ui-shadow-md);
+  pointer-events: auto;
+}
+
+.message {
+  margin: 0;
+  font-weight: var(--ui-font-weight-medium);
+}
+
+.actions {
+  display: flex;
+  gap: var(--ui-space-2);
+}
+
+@media (min-width: 48rem) {
+  .region {
+    bottom: max(var(--ui-space-6), env(safe-area-inset-bottom, 0px));
+    padding-left: var(--ui-layout-sidebar-width);
+  }
+}
