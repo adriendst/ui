@@ -1,6 +1,6 @@
 # packages/ui : règles locales
 
-Librairie de composants d'interface maison (`@mangad/ui`), pensée pour être extraite et publiée plus tard.
+Librairie de composants d'interface maison (`@etagere/ui`), pensée pour être extraite et publiée plus tard.
 Les conventions communes sont dans le [CLAUDE.md racine](../../CLAUDE.md). Pourquoi ces choix : [ADR 0006](../../md/decisions/0006-composants-maison-en-css-modules.md).
 
 ## Règles

@@ -1,4 +1,4 @@
-# Changelog @mangad/ui
+# Changelog @etagere/ui
 
 ## 0.1.0 (non publiée)
 

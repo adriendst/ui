@@ -1,5 +1,5 @@
 /*
- * Tokens de @mangad/ui : toutes les valeurs visuelles passent par ces variables.
+ * Tokens de @etagere/ui : toutes les valeurs visuelles passent par ces variables.
  * Thème clair par défaut, thème sombre via prefers-color-scheme ou data-theme="dark".
  */
 :root {
