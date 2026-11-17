@@ -11,6 +11,8 @@ export type SnackbarProps = Omit<ComponentPropsWithRef<'output'>, 'children'> & 
   /** Durée d'affichage en millisecondes, puis `onTimeout`. Sans elle, le bandeau reste. */
   duration?: number
   onTimeout?: () => void
+  /** `danger` : bandeau rouge, pour une erreur. */
+  tone?: 'neutral' | 'danger'
 }
 
 /**
@@ -24,10 +26,11 @@ export function Snackbar({
   actions,
   duration,
   onTimeout,
+  tone = 'neutral',
   className,
   ...props
 }: SnackbarProps) {
-  const classes = [styles.region, className].filter(Boolean).join(' ')
+  const classes = [styles.region, styles[tone], className].filter(Boolean).join(' ')
   const shown = message !== null && message !== undefined && message !== false
   return (
     <output className={classes} {...props}>

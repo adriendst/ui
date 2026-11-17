@@ -37,3 +37,19 @@ describe('SegmentedControl', () => {
     expect(onChange).toHaveBeenCalledWith('read')
   })
 })
+
+describe('SegmentedControl, variante discrète', () => {
+  it('garde les boutons radio et ajoute sa classe', () => {
+    const { container } = render(
+      <SegmentedControl
+        label="Type"
+        options={options}
+        value="owned"
+        onChange={() => {}}
+        variant="subtle"
+      />,
+    )
+    expect(screen.getByRole('radio', { name: 'Achetés' })).toBeChecked()
+    expect(container.firstElementChild?.classList.length).toBe(2)
+  })
+})

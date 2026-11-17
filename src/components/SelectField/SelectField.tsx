@@ -14,6 +14,8 @@ export type SelectFieldProps = Omit<ComponentPropsWithRef<'select'>, 'children' 
   description?: string
   /** Message d'erreur : rend la liste invalide et est annoncé aux lecteurs d'écran. */
   error?: string
+  /** Libellé lu par les lecteurs d'écran mais masqué à l'écran (filtre dont le sens est évident). */
+  hideLabel?: boolean
 }
 
 /** Liste de choix native : clavier, lecteurs d'écran et sélecteur du téléphone fournis par le navigateur. */
@@ -22,6 +24,7 @@ export function SelectField({
   options,
   description,
   error,
+  hideLabel = false,
   id,
   className,
   'aria-describedby': describedBy,
@@ -37,7 +40,7 @@ export function SelectField({
 
   return (
     <div className={classes}>
-      <label className={styles.label} htmlFor={selectId}>
+      <label className={hideLabel ? styles.hiddenLabel : styles.label} htmlFor={selectId}>
         {label}
       </label>
       <div className={styles.control}>

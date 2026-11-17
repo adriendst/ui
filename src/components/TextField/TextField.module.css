@@ -7,6 +7,34 @@
   font-weight: var(--ui-font-weight-medium);
 }
 
+.hiddenLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.control {
+  position: relative;
+  display: grid;
+}
+
+.icon {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: var(--ui-space-3);
+  display: grid;
+  place-items: center;
+  color: var(--ui-color-text-muted);
+  pointer-events: none;
+}
+
+.input.withIcon {
+  padding-inline-start: calc(var(--ui-space-3) * 2 + 1.25rem);
+}
+
 .input {
   min-height: var(--ui-touch-target);
   padding-inline: var(--ui-space-3);

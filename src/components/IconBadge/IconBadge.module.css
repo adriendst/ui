@@ -1,0 +1,31 @@
+.badge {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  border-radius: var(--ui-radius-lg);
+  background: color-mix(
+    in srgb,
+    var(--ui-icon-badge-color, var(--ui-color-accent)) 18%,
+    transparent
+  );
+  line-height: 1;
+}
+
+.sm {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: var(--ui-radius-md);
+  font-size: var(--ui-font-size-sm);
+}
+
+.md {
+  width: 2.375rem;
+  height: 2.375rem;
+  font-size: var(--ui-font-size-lg);
+}
+
+.lg {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: var(--ui-font-size-xl);
+}

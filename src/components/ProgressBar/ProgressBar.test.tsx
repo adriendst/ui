@@ -28,3 +28,16 @@ describe('ProgressBar', () => {
     expect(fills[1]?.style.inlineSize).toBe('0%')
   })
 })
+
+describe('ProgressBar, tons et tailles', () => {
+  it('change de classe selon le ton et la taille', () => {
+    const { container } = render(
+      <>
+        <ProgressBar value={1} max={2} />
+        <ProgressBar value={1} max={2} tone="danger" size="md" />
+      </>,
+    )
+    const [plain, danger] = Array.from(container.children)
+    expect(danger?.className).not.toBe(plain?.className)
+  })
+})

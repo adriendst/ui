@@ -1,7 +1,8 @@
 import styles from './Button.module.css'
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger'
-export type ButtonSize = 'md' | 'sm'
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'subtle' | 'danger' | 'danger-subtle'
+/** `icon` : carré de la taille d'une zone tactile, pour une icône seule (nom accessible obligatoire). */
+export type ButtonSize = 'md' | 'sm' | 'icon'
 
 /**
  * Classes du bouton, pour donner son apparence à un autre élément (lien du routeur de l'app…).

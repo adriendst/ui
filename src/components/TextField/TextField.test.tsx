@@ -26,3 +26,13 @@ describe('TextField', () => {
     expect(onChange).toHaveBeenCalledOnce()
   })
 })
+
+describe('TextField, libellé masqué et icône', () => {
+  it('garde le nom accessible et cache l’icône', () => {
+    render(
+      <TextField label="Rechercher" hideLabel icon={<svg data-testid="icon" />} type="search" />,
+    )
+    expect(screen.getByRole('searchbox', { name: 'Rechercher' })).toBeInTheDocument()
+    expect(screen.getByTestId('icon').parentElement).toHaveAttribute('aria-hidden', 'true')
+  })
+})

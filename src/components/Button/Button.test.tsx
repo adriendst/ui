@@ -45,3 +45,20 @@ describe('Button', () => {
     expect(link.className).toBe(`${button.className} extra`)
   })
 })
+
+describe('Button, variantes discrètes', () => {
+  it('garde un nom accessible en bouton icône', () => {
+    render(
+      <Button variant="subtle" size="icon" aria-label="Fermer">
+        <svg aria-hidden="true" />
+      </Button>,
+    )
+    expect(screen.getByRole('button', { name: 'Fermer' })).toBeInTheDocument()
+  })
+
+  it('compose variante et taille dans buttonClassName', () => {
+    const subtle = buttonClassName({ variant: 'danger-subtle', size: 'icon' }).split(' ')
+    expect(subtle).toHaveLength(3)
+    expect(new Set(subtle).size).toBe(3)
+  })
+})

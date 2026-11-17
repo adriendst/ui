@@ -6,6 +6,8 @@
   /* Couleurs */
   --ui-color-bg: #f7f7f5;
   --ui-color-surface: #ffffff;
+  /* Fond en retrait (survol discret, piste, groupe de choix). */
+  --ui-color-surface-muted: #efefec;
   --ui-color-text: #17181c;
   --ui-color-text-muted: #5b5f6b;
   --ui-color-border: #dcdde2;
@@ -19,8 +21,11 @@
   --ui-color-warning: #9a5a00;
   --ui-color-danger: #b42318;
   --ui-color-danger-hover: #912018;
+  --ui-color-danger-soft: #fdecea;
   --ui-color-on-danger: #ffffff;
   --ui-color-focus: #2d4f8b;
+  /* Voile derrière une fenêtre modale. */
+  --ui-color-backdrop: rgb(23 24 28 / 0.45);
 
   /* Typographie */
   --ui-font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
@@ -48,11 +53,13 @@
   /* Formes */
   --ui-radius-sm: 4px;
   --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
   --ui-radius-full: 999px;
   --ui-border-width: 1px;
 
   /* Ombres */
   --ui-shadow-md: 0 4px 16px rgb(23 24 28 / 0.12);
+  --ui-shadow-lg: 0 20px 60px rgb(23 24 28 / 0.25);
 
   /* Tailles */
   --ui-touch-target: 44px;
@@ -80,6 +87,7 @@
   :root:not([data-theme='light']) {
     --ui-color-bg: #121318;
     --ui-color-surface: #1a1c22;
+    --ui-color-surface-muted: #23262e;
     --ui-color-text: #ecedf1;
     --ui-color-text-muted: #a2a6b3;
     --ui-color-border: #2c2f38;
@@ -92,9 +100,12 @@
     --ui-color-warning: #f0b660;
     --ui-color-danger: #f97066;
     --ui-color-danger-hover: #fb8a82;
+    --ui-color-danger-soft: #3a1c1a;
     --ui-color-on-danger: #10141c;
     --ui-color-focus: #8fb0ea;
+    --ui-color-backdrop: rgb(0 0 0 / 0.6);
     --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
+    --ui-shadow-lg: 0 20px 60px rgb(0 0 0 / 0.6);
     color-scheme: dark;
   }
 }
@@ -102,6 +113,7 @@
 :root[data-theme='dark'] {
   --ui-color-bg: #121318;
   --ui-color-surface: #1a1c22;
+  --ui-color-surface-muted: #23262e;
   --ui-color-text: #ecedf1;
   --ui-color-text-muted: #a2a6b3;
   --ui-color-border: #2c2f38;
@@ -114,9 +126,12 @@
   --ui-color-warning: #f0b660;
   --ui-color-danger: #f97066;
   --ui-color-danger-hover: #fb8a82;
+  --ui-color-danger-soft: #3a1c1a;
   --ui-color-on-danger: #10141c;
   --ui-color-focus: #8fb0ea;
+  --ui-color-backdrop: rgb(0 0 0 / 0.6);
   --ui-shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
+  --ui-shadow-lg: 0 20px 60px rgb(0 0 0 / 0.6);
   color-scheme: dark;
 }
 

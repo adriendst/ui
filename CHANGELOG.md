@@ -1,5 +1,25 @@
 # Changelog @neirda/ui
 
+## 0.2.0
+
+Ajouts, sans rupture d'API.
+
+- Tokens : `--ui-color-surface-muted`, `--ui-color-danger-soft`, `--ui-color-backdrop`, `--ui-radius-lg`, `--ui-shadow-lg`.
+- `Button` : variantes `subtle` (discrète, couleur du texte) et `danger-subtle` (texte rouge, fond rouge pâle au survol) ; taille `icon` (carré d'une zone tactile, pour une icône seule).
+- `TextField` : `hideLabel` (libellé lu mais masqué) et `icon` (icône décorative en début de champ).
+- `SelectField` : `hideLabel`.
+- `SegmentedControl` : `variant="subtle"` (fond en retrait, choix en relief, sans séparateurs).
+- `ProgressBar` : tons `warning` et `danger`, taille `md` (plus épaisse).
+- `Snackbar` : `tone="danger"` pour une erreur.
+- Composant `Card` : bloc sur fond surface, titre (`h2` ou `h3`) et actions facultatifs, région nommée par son titre.
+- Composant `StatCard` : indicateur chiffré (intitulé, valeur, ton, complément).
+- Composants `List` et `ListItem` : liste à filets ; ligne avec visuel, titre, sous-titre et fin de ligne, cliquable en entier avec `onClick`.
+- Composant `IconBadge` : icône ou emoji sur pastille teintée (`color`, tailles `sm`, `md`, `lg`), décorative sauf avec `label`.
+- Composant `CheckboxField` : case à cocher native avec libellé et aide reliés.
+- Composant `Dialog` : fenêtre modale sur `<dialog>` natif (focus, Échap, voile fournis par le navigateur), feuille en bas d'écran sous 48rem, focus initial sur `data-autofocus`.
+- Composant `DonutChart` : anneau SVG sans dépendance, part de chaque segment lue par les lecteurs d'écran.
+- Composant `ChoiceGrid` : choix exclusif en grille de tuiles sur boutons radio natifs (contenu libre, couleur de sélection par option).
+
 ## 0.1.1
 
 Première version publiée sur npm (la 0.1.0, supprimée, ne peut plus être republiée).

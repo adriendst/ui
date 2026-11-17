@@ -94,3 +94,20 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+/* Variante discrète : fond en retrait, choix en relief, sans séparateurs. */
+.subtle .group {
+  gap: var(--ui-space-1);
+  border-color: transparent;
+  background: var(--ui-color-surface-muted);
+}
+
+.subtle .option::before {
+  display: none;
+}
+
+.subtle .option:has(:checked) {
+  background: var(--ui-color-surface);
+  color: var(--ui-color-text);
+  box-shadow: var(--ui-shadow-md);
+}

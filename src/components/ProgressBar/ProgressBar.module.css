@@ -18,3 +18,15 @@
 .success .fill {
   background: var(--ui-color-success);
 }
+
+.warning .fill {
+  background: var(--ui-color-warning);
+}
+
+.danger .fill {
+  background: var(--ui-color-danger);
+}
+
+.md {
+  height: var(--ui-space-2);
+}

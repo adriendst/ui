@@ -34,3 +34,10 @@ describe('SelectField', () => {
     expect(onChange).toHaveBeenCalledOnce()
   })
 })
+
+describe('SelectField, libellé masqué', () => {
+  it('garde le nom accessible', () => {
+    render(<SelectField label="Type" hideLabel options={[{ value: '', label: 'Tous' }]} />)
+    expect(screen.getByRole('combobox', { name: 'Type' })).toBeInTheDocument()
+  })
+})

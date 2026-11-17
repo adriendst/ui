@@ -1,0 +1,40 @@
+.field {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--ui-space-2);
+}
+
+.input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--ui-color-accent);
+  cursor: pointer;
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--ui-color-focus);
+  outline-offset: 2px;
+}
+
+.input:disabled,
+.input:disabled + .label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.label {
+  /* Le libellé cliquable complète la case jusqu'à une zone tactile. */
+  display: flex;
+  align-items: center;
+  min-height: var(--ui-touch-target);
+  cursor: pointer;
+}
+
+.description {
+  grid-column: 2;
+  margin: 0;
+  color: var(--ui-color-text-muted);
+  font-size: var(--ui-font-size-sm);
+}

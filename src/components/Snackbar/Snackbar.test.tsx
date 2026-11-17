@@ -62,3 +62,10 @@ describe('Snackbar', () => {
     expect(onTimeout).toHaveBeenCalledOnce()
   })
 })
+
+describe('Snackbar, ton danger', () => {
+  it('garde la zone d’annonce et affiche le message', () => {
+    render(<Snackbar message="Échec de l’enregistrement" tone="danger" />)
+    expect(screen.getByRole('status')).toHaveTextContent('Échec de l’enregistrement')
+  })
+})

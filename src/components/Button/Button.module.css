@@ -71,3 +71,28 @@
   padding-inline: var(--ui-space-3);
   font-size: var(--ui-font-size-sm);
 }
+
+/* Action secondaire discrète, dans la couleur du texte (icônes d'édition, fermeture…). */
+.subtle {
+  background: transparent;
+  color: var(--ui-color-text);
+}
+
+.subtle:hover:not(:disabled) {
+  background: var(--ui-color-surface-muted);
+}
+
+/* Action destructrice discrète : texte rouge, fond rouge pâle au survol. */
+.danger-subtle {
+  background: transparent;
+  color: var(--ui-color-danger);
+}
+
+.danger-subtle:hover:not(:disabled) {
+  background: var(--ui-color-danger-soft);
+}
+
+.icon {
+  width: var(--ui-touch-target);
+  padding-inline: 0;
+}

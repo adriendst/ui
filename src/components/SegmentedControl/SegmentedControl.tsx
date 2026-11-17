@@ -18,6 +18,8 @@ export type SegmentedControlProps<T extends string> = Omit<
   onChange: (value: T) => void
   /** Nom des boutons radio ; généré par défaut. */
   name?: string
+  /** `solid` : choix plein en couleur d'accent ; `subtle` : choix en relief sur un fond en retrait. */
+  variant?: 'solid' | 'subtle'
 }
 
 /**
@@ -31,13 +33,14 @@ export function SegmentedControl<T extends string>({
   value,
   onChange,
   name,
+  variant = 'solid',
   className,
   ...props
 }: SegmentedControlProps<T>) {
   const generatedId = useId()
   const labelId = `${generatedId}-label`
   const groupName = name ?? generatedId
-  const classes = [styles.field, className].filter(Boolean).join(' ')
+  const classes = [styles.field, styles[variant], className].filter(Boolean).join(' ')
 
   return (
     <div className={classes} {...props}>
