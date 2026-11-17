@@ -1,5 +1,9 @@
 # Changelog @neirda/ui
 
+## 0.1.1
+
+Première version publiée sur npm (la 0.1.0, supprimée, ne peut plus être republiée).
+
 ## 0.1.0
 
 - Paquet renommé `@neirda/ui`, publiable sur npm : build Vite (`dist/index.js`, `dist/style.css`, `dist/tokens.css`, types), à importer avec `@neirda/ui/tokens.css` et `@neirda/ui/style.css`.
