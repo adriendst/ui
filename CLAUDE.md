@@ -1,7 +1,7 @@
 # packages/ui : règles locales
 
-Librairie de composants d'interface maison (`@etagere/ui`), pensée pour être extraite et publiée plus tard.
-Les conventions communes sont dans le [CLAUDE.md racine](../../CLAUDE.md). Pourquoi ces choix : [ADR 0006](../../md/decisions/0006-composants-maison-en-css-modules.md).
+Librairie de composants d'interface maison (`@adriendst/ui`), publiée sur npm.
+Pourquoi ces choix : [ADR 0006](https://github.com/adriendst/MangAD/blob/main/md/decisions/0006-composants-maison-en-css-modules.md) et [ADR 0029](https://github.com/adriendst/MangAD/blob/main/md/decisions/0029-librairie-ui-publiee-sur-npm.md) (dépôt Étagère, d’où vient cette librairie).
 
 ## Règles
 

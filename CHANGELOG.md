@@ -1,6 +1,8 @@
-# Changelog @etagere/ui
+# Changelog @adriendst/ui
 
-## 0.1.0 (non publiée)
+## 0.1.0
+
+- Paquet renommé `@adriendst/ui`, publiable sur npm : build Vite (`dist/index.js`, `dist/style.css`, `dist/tokens.css`, types), à importer avec `@adriendst/ui/tokens.css` et `@adriendst/ui/style.css`.
 
 - Tokens de design (couleurs clair/sombre, typographie, espacements, formes, mouvement).
 - Tokens de mise en page (`--ui-layout-*`), de superposition (`--ui-z-*`), d'ombre (`--ui-shadow-md`), `--ui-font-size-xs` et `--ui-line-height-tight`.
