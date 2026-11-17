@@ -1,5 +1,5 @@
 {
-  "name": "@adriendst/ui",
+  "name": "@neirda/ui",
   "version": "0.1.0",
   "description": "Composants React accessibles, stylés par tokens CSS (thème clair et sombre)",
   "license": "MIT",

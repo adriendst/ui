@@ -1,11 +1,11 @@
-# @adriendst/ui
+# @neirda/ui
 
 Composants React accessibles, stylés par tokens CSS (`--ui-…`), thème clair et sombre.
 
 ## Installation
 
 ```bash
-pnpm add @adriendst/ui
+pnpm add @neirda/ui
 ```
 
 Peer dependencies : `react` et `react-dom` 19.
@@ -15,14 +15,14 @@ Peer dependencies : `react` et `react-dom` 19.
 Importer les deux feuilles une fois, au point d'entrée de l'app :
 
 ```ts
-import '@adriendst/ui/tokens.css'
-import '@adriendst/ui/style.css'
+import '@neirda/ui/tokens.css'
+import '@neirda/ui/style.css'
 ```
 
 Puis les composants :
 
 ```tsx
-import { Button } from '@adriendst/ui'
+import { Button } from '@neirda/ui'
 
 ;<Button variant="primary">Enregistrer</Button>
 ```
